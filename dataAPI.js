@@ -1,9 +1,12 @@
 (async () => {
+  // return await processData();
+})();
+
+export async function processData() {
   const datalink = await getData("https://covid19.mathdro.id/api");
   const { confirmed } = datalink;
   const data = await getData(confirmed.detail);
   // console.log(data);
-
   const filterData = ({ provinceState, countryRegion, confirmed, deaths }) => ({
     provinceState,
     countryRegion,
@@ -16,7 +19,8 @@
   };
   const datafinal = data.map(filterData).sort(sortData);
   console.log(datafinal);
-})();
+  return datafinal;
+}
 
 async function getData(url) {
   try {

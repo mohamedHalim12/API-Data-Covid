@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API-COVID</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="navBar.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a class="active" href="viewAllData.html">All Data</a>
+    </header>
+
+    <div class="search-container">
+      <form>
+        <input
+          type="text"
+          placeholder="Search.."
+          name="search"
+          class="searchImput"
+        />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <div class="textTips">
+        <h2></h2>
+        <p>Search the contry that you what to view the data</p>
+      </div>
+    </div>
+
+    <script src="dataAPI.js"></script>
+  </body>
+</html>

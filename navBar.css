@@ -1,8 +1,32 @@
 .navbar {
-  background-color: red;
+  background-color: rgb(137, 145, 142);
+  display: flex;
+  gap: 1px;
+}
+.navlink {
+  padding: 20px;
+  background-color: rgb(88, 85, 85);
+  color: white;
+  text-decoration: none;
+}
+.navlink:hover {
+  background-color: rgb(167, 157, 157);
 }
 .search-container {
-  background-color: blue;
+  /* background-color: blue; */
   width: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: center;
+}
+.searchForm {
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.searchImput {
+  width: 45%;
+  padding: 10px;
 }

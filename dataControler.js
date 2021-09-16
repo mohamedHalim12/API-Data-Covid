@@ -1,7 +1,8 @@
 import { processData } from "./dataAPI.js";
 creatListElement();
+// console.log("hello");
 async function creatListElement() {
-  console.log(processData());
+  // console.log(processData());
 
   const ulConfirmed = document.getElementById("confirmed");
   const ulContryRegion = document.getElementById("countryRegion");

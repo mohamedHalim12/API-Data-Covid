@@ -11,18 +11,19 @@
     />
     <link rel="stylesheet" href="navBar.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/listStyle.css" />
   </head>
   <body>
     <header class="navbar">
-      <a class="navlink" href="viewAllData.html">All Data</a>
+      <a class="navlink allData" href="viewAllData.html">All Data</a>
       <a class="navlink" href="#">About</a>
       <a class="navlink" href="#">contact</a>
     </header>
 
     <div class="search-container">
-      <form class="searchForm">
+      <form id="searchForm" class="searchForm" role="search">
         <input
-          type="text"
+          type="search"
           placeholder="Search.."
           name="search"
           class="searchImput"
@@ -34,8 +35,24 @@
         <p>Search the contry that you want to view the data</p>
       </div>
     </div>
-    <div class="result"> le resultat sera afficher ici </div>
+    <div class="result">
+      <div class="data">
+        <ul id="countryRegion" class="country">
+          <li class="listTitle">Contry Region</li>
+        </ul>
+        <ul id="provinceState" class="region">
+          <li class="listTitle">Province State</li>
+        </ul>
+        <ul id="confirmed" class="confirm">
+          <li class="listTitle">Confirmed</li>
+        </ul>
+        <ul id="deaths" class="dead">
+          <li class="listTitle">Deaths</li>
+        </ul>
+      </div>
+    </div>
 
-    <script src="dataAPI.js"></script>
+    <!-- <script src="./dataAPI.js" type="moduule"></script> -->
+    <script src="./research.js" type="module"></script>
   </body>
 </html>

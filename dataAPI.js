@@ -1,6 +1,6 @@
-(async () => {
-  // return await processData();
-})();
+// (async () => {
+//   // return await processData();
+// })();
 
 export async function processData() {
   const datalink = await getData("https://covid19.mathdro.id/api");
@@ -18,7 +18,7 @@ export async function processData() {
     else return -1;
   };
   const datafinal = data.map(filterData).sort(sortData);
-  console.log(datafinal);
+  // console.log(datafinal);
   return datafinal;
 }
 

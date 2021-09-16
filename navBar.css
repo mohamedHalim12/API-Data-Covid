@@ -9,8 +9,14 @@
   color: white;
   text-decoration: none;
 }
+.allData {
+  background-color: blue;
+}
 .navlink:hover {
   background-color: rgb(167, 157, 157);
+}
+.allData:hover {
+  background-color: rgb(93, 93, 196);
 }
 .search-container {
   /* background-color: blue; */

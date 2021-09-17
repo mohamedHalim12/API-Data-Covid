@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>all data API</title>
-    <link rel="stylesheet" href="listStyle.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/listStyle.css" />
+    <link rel="stylesheet" href="style/loaders.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
       rel="preload"
       href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css"
@@ -15,26 +19,36 @@
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,200;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
       <a href="index.html"> <i class="fal fa-home"></i> return in the main </a>
       <h1>All Covid Data</h1>
     </header>
-    <div class="data">
-      <ul id="countryRegion" class="country">
-        <li class="listTitle">Contry Region</li>
-      </ul>
-      <ul id="provinceState" class="region">
-        <li class="listTitle">Province State</li>
-      </ul>
-      <ul id="confirmed" class="confirm">
-        <li class="listTitle">Confirmed</li>
-      </ul>
-      <ul id="deaths" class="dead">
-        <li class="listTitle">Deaths</li>
-      </ul>
+    <div class="result">
+      <div class="data data-table preloader-parent">
+        <div class="spinner-preloader">
+          <div class="load-spinner"></div>
+        </div>
+        <span class="data-column data-header listTitle">Contry Region</span>
+        <span class="data-column data-header listTitle">Province State</span>
+        <span class="data-column data-header listTitle">Confirmed</span>
+        <span class="data-column data-header listTitle">Deaths</span>
+
+        <ul id="countryRegion" class="data-column data-result country"></ul>
+        <ul id="provinceState" class="data-column data-result province"></ul>
+        <ul id="confirmed" class="data-column data-result confirm"></ul>
+        <ul id="deaths" class="data-column data-result dead"></ul>
+      </div>
     </div>
-    <script src="./dataControler.js" type="module"></script>
+    <script src="./js/dataControler.js" type="module" async></script>
   </body>
 </html>
